@@ -10,7 +10,7 @@ export class AppComponent {
   class_1 = ["", ""];
   class_2 = ["", ""];
 
-  classes = {
+  classes: { [key: string]: [string, string] } = {
     "ch": ["國文", "https://meet.google.com/wwy-bzuu-hcx"],
     "eng": ["英文", "https://meet.google.com/bcv-xrwj-qze"],
     "math": ["數學", "https://meet.google.com/kfc-ohtx-dkz"],
