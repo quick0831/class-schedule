@@ -25,15 +25,14 @@ export class AppComponent {
     "geo": ["地理", ""]
   };
 
-  // use null as continuous class
   table = [
     ["pro2", "pro1", "math", "pro1", "ele" ],
-    ["pra1",  null , "pra3", "pro2",  null ],
-    [ null , "math",  null ,  null ,  null ],
-    [ null ,  null ,  null , "ch"  , "cl"  ],
+    ["pra1", "pro1", "pra3", "pro2", "ele" ],
+    ["pra1", "math", "pra3", "pro2", "ele" ],
+    ["pra1", "math", "pra3", "ch"  , "cl"  ],
     ["pra2", "ch"  , "pe"  , "eng" , "geo" ],
-    [ null ,  null ,  null ,  null ,  null ],
-    [ null , "eng" , "eng" , "math", "ch"  ]
+    ["pra2", "ch"  , "pe"  , "eng" , "geo" ],
+    ["pra2", "eng" , "eng" , "math", "ch"  ]
   ];
 
 }
