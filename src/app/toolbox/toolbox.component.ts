@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-toolbox',
@@ -9,6 +9,12 @@ export class ToolboxComponent implements OnInit {
 
   date_string = "";
   time_string = "";
+
+  @Input() link_1 = "";
+  @Input() link_2 = "";
+
+  @Input() class_string_1 = "";
+  @Input() class_string_2 = "";
 
   ngOnInit(): void {
     setInterval(() => {

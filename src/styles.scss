@@ -18,6 +18,10 @@ $class-schedule-accent: mat.define-palette(mat.$indigo-palette, A200, A100, A400
 // The warn palette is optional.
 $class-schedule-warn: mat.define-palette(mat.$red-palette);
 
+$class-schedule-typography-config: mat.define-typography-config(
+  $button: mat.define-typography-level(32px, 40px, 400)
+);
+
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
 $class-schedule-theme: mat.define-dark-theme((
@@ -25,7 +29,8 @@ $class-schedule-theme: mat.define-dark-theme((
     primary: $class-schedule-primary,
     accent: $class-schedule-accent,
     warn: $class-schedule-warn,
-  )
+  ),
+  typography: $class-schedule-typography-config
 ));
 
 // Include theme styles for core and each component used in your app.
