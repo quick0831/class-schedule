@@ -24,7 +24,7 @@ export class ToolboxComponent implements OnInit {
 
   ngOnInit(): void {
     this.update_clock();
-    setInterval(this.update_clock, 1000);
+    setInterval(() => this.update_clock(), 1000);
   }
 
 }
