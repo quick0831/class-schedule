@@ -10,11 +10,8 @@ export class ToolboxComponent implements OnInit {
   date_string = "";
   time_string = "";
 
-  @Input() link_1 = "";
-  @Input() link_2 = "";
-
-  @Input() class_string_1 = "";
-  @Input() class_string_2 = "";
+  @Input() class_1 = ["", ""];
+  @Input() class_2 = ["", ""];
 
   update_clock(): void {
     let time = new Date();
