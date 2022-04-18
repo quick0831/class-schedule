@@ -16,12 +16,15 @@ export class ToolboxComponent implements OnInit {
   @Input() class_string_1 = "";
   @Input() class_string_2 = "";
 
+  update_clock(): void {
+    let time = new Date();
+    this.date_string = time.toLocaleDateString();
+    this.time_string = time.toLocaleTimeString();
+  }
+
   ngOnInit(): void {
-    setInterval(() => {
-      let time = new Date();
-      this.date_string = time.toLocaleDateString();
-      this.time_string = time.toLocaleTimeString();
-    }, 1000);
+    this.update_clock();
+    setInterval(this.update_clock, 1000);
   }
 
 }
