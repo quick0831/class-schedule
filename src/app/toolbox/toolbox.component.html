@@ -1,10 +1,10 @@
 <b class="Time mat-display-3">{{date_string}}</b><br>
 <b class="Time mat-display-4">{{time_string}}</b><br>
 <br>
-<a *ngIf="class_1[0]&&class_1[1]" mat-raised-button [href]="class_1[1]" color="primary">點我上{{class_1[0]}}課</a>
+<a *ngIf="class_1[0]&&class_1[1]" mat-raised-button [href]="class_1[1]" target="_blank" color="primary">點我上{{class_1[0]}}課</a>
 <button *ngIf="class_1[0]&&!class_1[1]" mat-raised-button color="primary">這節是{{class_1[0]}}課</button>
 <button *ngIf="!class_1[0]" mat-raised-button color="primary">沒課</button>
 &nbsp;&nbsp;&nbsp;
-<a *ngIf="class_2[0]&&class_2[1]" mat-raised-button [href]="class_2[1]">點我上{{class_2[0]}}課</a>
+<a *ngIf="class_2[0]&&class_2[1]" mat-raised-button [href]="class_2[1]" target="_blank">點我上{{class_2[0]}}課</a>
 <button *ngIf="class_2[0]&&!class_2[1]" mat-raised-button>下節是{{class_2[0]}}課</button>
 <button *ngIf="!class_2[0]" mat-raised-button>沒課</button>
