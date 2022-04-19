@@ -8,12 +8,14 @@ import { TimeTableComponent } from './time-table/time-table.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { CountdownComponent } from './countdown/countdown.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ToolboxComponent,
-    TimeTableComponent
+    TimeTableComponent,
+    CountdownComponent
   ],
   imports: [
     BrowserModule,
