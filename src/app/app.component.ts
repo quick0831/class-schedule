@@ -13,7 +13,7 @@ export class AppComponent {
   classes: { [key: string]: [string, string] } = {
     "ch": ["國文", "https://meet.google.com/wwy-bzuu-hcx"],
     "eng": ["英文", "https://meet.google.com/bcv-xrwj-qze"],
-    "math": ["數學", "https://meet.google.com/kfc-ohtx-dkz"],
+    "math": ["數學", "https://meet.google.com/err-jgos-xmg"],
     "pro1": ["感測器", "https://meet.google.com/pjc-yfzw-bea"],
     "pro2": ["介面電路原理", "https://meet.google.com/bqe-caat-edk"],
     "pra1": ["介面電路實習", "https://meet.google.com/pjc-yfzw-bea"],
