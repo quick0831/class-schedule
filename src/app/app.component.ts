@@ -68,7 +68,7 @@ export class AppComponent {
       if(t < 840) return 4;
       if(t < 900) return 5;
       if(t < 960) return 6;
-      return -1;
+      return -2;
     })();
     while(i>=0 && this.class_length[i][this.weekday]==-1)
       i -= 1;
@@ -77,6 +77,8 @@ export class AppComponent {
 
   get next_class_num(): number {
     let i = this.class_num + 1;
+    if(i < 0)
+      return -1;
     while(i<7 && this.class_length[i][this.weekday]==-1)
       i += 1;
     if(i == 7)
