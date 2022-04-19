@@ -1,0 +1,14 @@
+<table>
+  <tr>
+    <th></th>
+    <th *ngFor="let w of weekdays">{{w}}</th>
+  </tr>
+  <tr *ngFor="let r of table; let i = index">
+    <td>{{i+1}}</td>
+    <ng-container *ngFor="let c of r; let j = index">
+      <td *ngIf="class_length[i][j] >= 0" [attr.rowspan]="class_length[i][j]+1">
+        {{get_class(c)[0]}}
+      </td>
+    </ng-container>
+  </tr>
+</table>

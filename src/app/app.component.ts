@@ -35,4 +35,18 @@ export class AppComponent {
     ["pra2", "eng" , "eng" , "math", "ch"  ]
   ];
 
+  class_length: number[][] = [];
+
+  constructor() {
+    let a = Array.from(Array(7), () => new Array(5).fill(0));
+    for(let i = 6; i > 0; i--){ // exclude first row
+      for(let j = 0; j < 5; j++){
+        if(this.table[i][j] === this.table[i-1][j]){
+          a[i-1][j] = a[i][j] + 1;
+          a[i][j] = -1;
+        }
+      }
+    }
+    this.class_length = a;
+  }
 }
