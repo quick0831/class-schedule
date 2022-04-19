@@ -21,22 +21,27 @@ export class TimeTableComponent implements OnInit {
   }
 
   get weekday(): number {
-    return new Date().getDay();
+    return new Date().getDay()-1;
   }
 
   get class_num(): number {
-    let d = new Date();
-    let t = d.getHours() * 60 + d.getMinutes();
-    if(t < 500) return -1;
-    if(t < 550) return 0;
-    if(t < 610) return 1;
-    if(t < 670) return 2;
-    if(t < 730) return 3;
-    //if(t < 790) return -1; // noon break
-    if(t < 840) return 4;
-    if(t < 900) return 5;
-    if(t < 960) return 6;
-    return -1;
+    let i = ((): number => {
+      let d = new Date();
+      let t = d.getHours() * 60 + d.getMinutes();
+      if(t < 500) return -1;
+      if(t < 550) return 0;
+      if(t < 610) return 1;
+      if(t < 670) return 2;
+      if(t < 730) return 3;
+      //if(t < 790) return -1; // noon break
+      if(t < 840) return 4;
+      if(t < 900) return 5;
+      if(t < 960) return 6;
+      return -1;
+    })();
+    while(i>=0 && this.class_length[i][this.weekday]==-1)
+      i -= 1;
+    return i;
   }
 
 }

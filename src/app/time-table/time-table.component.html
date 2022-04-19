@@ -6,8 +6,11 @@
   <tr *ngFor="let r of table; let i = index">
     <td>{{i+1}}</td>
     <ng-container *ngFor="let c of r; let j = index">
-      <td *ngIf="class_length[i][j] >= 0" [attr.rowspan]="class_length[i][j]+1">
-        {{get_class(c)[0]}}
+      <td *ngIf="class_length[i][j] >= 0"
+        [attr.rowspan]="class_length[i][j]+1">
+        <a mat-button [color]="(i == class_num && j == weekday)?'primary':''">
+          {{get_class(c)[0]}}
+        </a>
       </td>
     </ng-container>
   </tr>
