@@ -8,9 +8,18 @@
     <ng-container *ngFor="let c of r; let j = index">
       <td *ngIf="class_length[i][j] >= 0"
         [attr.rowspan]="class_length[i][j]+1">
-        <a mat-button [color]="(i == class_num && j == weekday)?'primary':''">
+        <a *ngIf="get_class(c)[1]"
+          mat-button
+          [color]="(i == class_num && j == weekday)?'primary':''"
+          [href]="get_class(c)[1]"
+          target="_blank">
           {{get_class(c)[0]}}
         </a>
+        <button *ngIf="!get_class(c)[1]"
+          mat-button
+          [color]="(i == class_num && j == weekday)?'primary':''">
+          {{get_class(c)[0]}}
+        </button>
       </td>
     </ng-container>
   </tr>
