@@ -18,8 +18,8 @@ export class AppComponent {
     "pra3": ["智慧電子應用實習", "https://meet.google.com/mgf-rudw-umo"],
     "cl": ["班會", "https://meet.google.com/bqe-caat-edk"],
     "ele": ["基本電學", "https://meet.google.com/ncw-hxow-dpx"],
-    "pe": ["體育", ""],
-    "geo": ["地理", ""]
+    "pe": ["體育", "https://meet.google.com/fad-etxh-hag"],
+    "geo": ["地理", "https://cloud.taivs.tp.edu.tw/moodle/mod/quiz/view.php?id=18012"]
   };
 
   table = [
