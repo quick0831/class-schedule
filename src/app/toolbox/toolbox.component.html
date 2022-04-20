@@ -3,8 +3,8 @@
 <br>
 <a *ngIf="class_1[0]&&class_1[1]" mat-raised-button [href]="class_1[1]" target="_blank" color="primary">點我上{{class_1[0]}}課</a>
 <button *ngIf="class_1[0]&&!class_1[1]" mat-raised-button color="primary">這節是{{class_1[0]}}課</button>
-<button *ngIf="!class_1[0]" mat-raised-button color="primary">沒課</button>
+<a *ngIf="!class_1[0]" mat-raised-button href="https://www.youtube.com/watch?v=YbaTur4A1OU" target="_blank" color="primary">沒課</a>
 &nbsp;&nbsp;&nbsp;
 <a *ngIf="class_2[0]&&class_2[1]" mat-raised-button [href]="class_2[1]" target="_blank">點我上{{class_2[0]}}課</a>
 <button *ngIf="class_2[0]&&!class_2[1]" mat-raised-button>下節是{{class_2[0]}}課</button>
-<button *ngIf="!class_2[0]" mat-raised-button>沒課</button>
+<a *ngIf="!class_2[0]" mat-raised-button href="https://www.youtube.com/watch?v=xjO8BFnNk9c" target="_blank">沒課</a>
