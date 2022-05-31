@@ -23,3 +23,13 @@ export const table = [
   ["pra2", "ch"  , "pe"  , "eng" , "geo" ],
   ["pra2", "eng" , "eng" , "math", "ch"  ]
 ];
+
+export const table_time = [
+  [ 9, 10], // 第一節下課
+  [10, 10], // 第二節下課
+  [11, 10],
+  [12, 10],
+  [14, 10],
+  [15, 10],
+  [16,  0] // 最後一節下課(放學)
+];
