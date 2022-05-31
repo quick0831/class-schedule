@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 
+import { weekdays } from '../customization';
+
 @Component({
   selector: 'app-time-table',
   templateUrl: './time-table.component.html',
@@ -7,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class TimeTableComponent implements OnInit {
 
-  weekdays = ["一", "二", "三", "四", "五"];
+  weekdays = weekdays;
 
   @Input() table: (string)[][] = [];
   @Input() classes: { [key: string]: [string, string] } = {};

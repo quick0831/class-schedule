@@ -1,4 +1,6 @@
 
+export const weekdays = ["一", "二", "三", "四", "五"];
+
 export const classes: { [key: string]: [string, string] } = {
   "ch": ["國文", "https://meet.google.com/wwy-bzuu-hcx"],
   "eng": ["英文", "https://meet.google.com/bcv-xrwj-qze"],
