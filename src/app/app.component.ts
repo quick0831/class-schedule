@@ -35,10 +35,15 @@ export class AppComponent {
   get weekday(): number {
     return new Date().getDay()-1;
   }
+  get weekend(): boolean {
+    return this.weekday == -1 || this.weekday == 5;
+  }
 
   get class_num(): number {
     // n == -1  -> before school time (removed)
     // n == -2  ->  after school time
+    if(this.weekend)
+      return -2;
     let n = ((): number => {
       let d = new Date();
       let t = d.getHours() * 60 + d.getMinutes();
@@ -61,6 +66,8 @@ export class AppComponent {
     let i = this.class_num + 1;
     if(i < 0)
       return -1;
+    if(this.weekend)
+      return -1;
     while(i<7 && this.class_length[i][this.weekday]==-1)
       i += 1;
     if(i == 7)
@@ -72,12 +79,16 @@ export class AppComponent {
     let i = this.class_num;
     if(i < 0)
       return ["", ""];
+    if(this.weekend)
+      return ["", ""];
     return this.get_class(this.table[i][this.weekday])
   }
 
   get class_2(): [string, string] {
     let i = this.next_class_num;
     if(i < 0)
+      return ["", ""];
+    if(this.weekend)
       return ["", ""];
     return this.get_class(this.table[i][this.weekday])
   }
