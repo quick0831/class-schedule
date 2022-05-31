@@ -1,6 +1,7 @@
-
+// 週一到週五 文字顯示
 export const weekdays = ["一", "二", "三", "四", "五"];
 
+// 紀錄代號與課程資訊的對應
 export const classes: { [key: string]: [string, string] } = {
   "ch": ["國文", "https://meet.google.com/wwy-bzuu-hcx"],
   "eng": ["英文", "https://meet.google.com/bcv-xrwj-qze"],
@@ -16,6 +17,7 @@ export const classes: { [key: string]: [string, string] } = {
   "geo": ["地理", "https://cloud.taivs.tp.edu.tw/moodle/mod/quiz/view.php?id=18012"]
 };
 
+// 用代號描述課表
 export const table = [
   ["pro2", "pro1", "math", "pro1", "ele" ],
   ["pra1", "pro1", "pra3", "pro2", "ele" ],
@@ -26,6 +28,7 @@ export const table = [
   ["pra2", "eng" , "eng" , "math", "ch"  ]
 ];
 
+// 計算節數用 (請填寫每節的下課時間)
 export const table_time = [
   [ 9, 10], // 第一節下課
   [10, 10], // 第二節下課
