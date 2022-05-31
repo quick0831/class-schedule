@@ -36,7 +36,9 @@ export class AppComponent {
   }
 
   get class_num(): number {
-    let i = ((): number => {
+    // n == -1  -> before school time (removed)
+    // n == -2  ->  after school time
+    let n = ((): number => {
       let d = new Date();
       let t = d.getHours() * 60 + d.getMinutes();
       if(t < 500) return -1;
@@ -50,9 +52,10 @@ export class AppComponent {
       if(t < 960) return 6;
       return -2;
     })();
-    while(i>=0 && this.class_length[i][this.weekday]==-1)
-      i -= 1;
-    return i;
+    // trace back
+    while(n>=0 && this.class_length[n][this.weekday]==-1)
+      n -= 1;
+    return n;
   }
 
   get next_class_num(): number {
